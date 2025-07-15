@@ -1,4 +1,4 @@
-# sentiment-analyser-client
+# mcp-client
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
@@ -24,11 +24,11 @@ Before running the application, you need to set up your OpenAI API key:
 
 The application provides the following endpoint:
 
-- `GET /sentiment/analyze-text?text=<your-text>` - Analyzes the sentiment of the provided text
+- `GET /mcp/analyze-text?text=<your-text>` - Analyzes the sentiment of the provided text OR return weather of US based places. Everything else returns text saying I don't know the answer.
 
 Example:
 ```bash
-curl "http://localhost:8080/sentiment/analyze-text?text=I%20love%20this%20product"
+curl "http://localhost:8080/mcp/analyze-text?text=Analyse sentiment of I love this product"
 ```
 
 ## Running the application in dev mode
@@ -76,7 +76,7 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 ./mvnw package -Dnative -Dquarkus.native.container-build=true
 ```
 
-You can then execute your native executable with: `./target/sentiment-analyser-client-1.0-SNAPSHOT-runner`
+You can then execute your native executable with: `./target/mcp-client-1.0-SNAPSHOT-runner`
 
 If you want to learn more about building native executables, please consult <https://quarkus.io/guides/maven-tooling>.
 
